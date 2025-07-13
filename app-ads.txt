@@ -12207,7 +12207,7 @@ window.__require = function t(e, n, o) {
                     "auto_merge" == t.advName && this.addAutoSuc()
                 },
                 e.prototype.onMsgCopChange = function () {
-                    d.default.checkActive("auto_merge") || (this.btnAdv.node.active = !1)
+                    d.default.checkActive("auto_merge", "count", 5) || (this.btnAdv.node.active = !1)
                 },
                 e.prototype.refreshTime = function () {
                     var t = c.default.mItem.getItemCount(s.ITEM_ID.AUTO_MERGE),
@@ -16611,7 +16611,7 @@ window.__require = function t(e, n, o) {
                     this.close()
                 },
                 e.prototype.on_click_btnAdv = function () {
-                    a.default.isFreeLottery ? (this.startRot(), a.default.setLottery()) : s.default.dispatchAdv("lottery", null, !0)
+                    a.default.isFreeLottery ? s.default.dispatchAdv("lottery", null, !0) : (this.startRot(), a.default.setLottery())
                 },
                 e
             }
